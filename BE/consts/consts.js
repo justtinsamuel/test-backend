@@ -1,0 +1,15 @@
+const APP_NAME = "Mploye";
+const API_PREFIX = "/api";
+const API_VERSION = "v1";
+
+const HTTP_STATUS = {
+  OK: 200,
+  CREATED: 201,
+  BAD_REQUEST: 400,
+  UNAUTHORIZED: 401,
+  FORBIDDEN: 403,
+  NOT_FOUND: 404,
+  INTERNAL_SERVER_ERROR: 500,
+};
+
+module.exports = { APP_NAME, API_PREFIX, API_VERSION, HTTP_STATUS };
