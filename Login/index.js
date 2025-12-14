@@ -15,7 +15,7 @@ app.use(morgan("combined"));
 app.use(express.json());
 
 app.get("/health", (req, res) => {
-  res.send("OK");
+  res.send("Hello World");
 });
 
 app.listen(PORT, () => {

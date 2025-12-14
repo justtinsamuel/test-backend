@@ -1,5 +1,6 @@
 const { Item } = require("../models");
 const { Op } = require("sequelize");
+const { authentication, authorization } = require("../middlewares");
 
 class ItemController {
   static async getItems(req, res, next) {
@@ -22,6 +23,7 @@ class ItemController {
     }
   }
   static async createItem(req, res, next) {
+    authentication(req, res, next);
     try {
       const { name, price, stock, category, image, UserId } = req.body;
       const item = await Item.create({
@@ -38,6 +40,8 @@ class ItemController {
     }
   }
   static async updateItem(req, res, next) {
+    authentication(req, res, next);
+    authorization(req, res, next);
     try {
       const [updated] = await Item.update(req.body, {
         where: {
@@ -53,6 +57,8 @@ class ItemController {
     }
   }
   static async deleteItem(req, res, next) {
+    authentication(req, res, next);
+    authorization(req, res, next);
     try {
       const deleted = await Item.destroy({
         where: {
