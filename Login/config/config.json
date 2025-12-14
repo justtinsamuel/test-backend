@@ -1,0 +1,25 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "admin",
+    "database": "test-login",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "testdb_xnw5_user",
+    "password": "XEKnXgXiXtETQiOa8n1mfs0Idj4ZFoVc",
+    "database": "testdb_xnw5",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "port": 5432,
+    "url": "postgresql://testdb_xnw5_user:XEKnXgXiXtETQiOa8n1mfs0Idj4ZFoVc@dpg-d4v6luili9vc73di1hg0-a.singapore-postgres.render.com/testdb_xnw5"
+  }
+}
